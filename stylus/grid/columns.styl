@@ -1,0 +1,32 @@
+@import "../utilities/flexbox"
+
+$gutter = 15px
+
+.Grido
+    flex()
+    flex-wrap(wrap)
+    width 100%
+
+    &--with-gutter
+        @extend .Grido
+
+        > *
+            padding-left $gutter
+            padding-right $gutter
+
+    &--j-c-around
+        flex-justify(space-around)
+
+    &--j-c-end
+        flex-justify(flex-end)
+
++prefix-classes('Grido__')
+    .just-around
+        flex-justify(space-around)
+
+    .vertAlign-center
+        flex-align-items(center)
+
+    for num in 1..12
+        .is--{num}
+            width ( 100% / 12 ) * num

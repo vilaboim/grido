@@ -1,0 +1,76 @@
+/* http://vilaboim.github.io/grido v0.0.1 | MIT License | github.com/vilaboim/grido */
+@charset "utf-8";
+.Grido,
+.Grido--with-gutter {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Grido--with-gutter > *,
+.Grido--with-gutter--with-gutter > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.Grido--j-c-around,
+.Grido--with-gutter--j-c-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+  justify-content: space-around;
+}
+.Grido--j-c-end,
+.Grido--with-gutter--j-c-end {
+  -webkit-justify-content: flex-end;
+  -ms-flex-line-pack: end;
+  justify-content: flex-end;
+}
+.Grido__just-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+  justify-content: space-around;
+}
+.Grido__vertAlign-center {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.Grido__is--1 {
+  width: 8.333333333333334%;
+}
+.Grido__is--2 {
+  width: 16.666666666666668%;
+}
+.Grido__is--3 {
+  width: 25%;
+}
+.Grido__is--4 {
+  width: 33.333333333333336%;
+}
+.Grido__is--5 {
+  width: 41.66666666666667%;
+}
+.Grido__is--6 {
+  width: 50%;
+}
+.Grido__is--7 {
+  width: 58.333333333333336%;
+}
+.Grido__is--8 {
+  width: 66.66666666666667%;
+}
+.Grido__is--9 {
+  width: 75%;
+}
+.Grido__is--10 {
+  width: 83.33333333333334%;
+}
+.Grido__is--11 {
+  width: 91.66666666666667%;
+}
+.Grido__is--12 {
+  width: 100%;
+}

@@ -1,0 +1,11 @@
+# Files
+.DS_Store
+.ruby-version
+test.stylus
+npm-debug.log
+
+# Folders
+.idea/
+_gh_pages
+_site
+node_modules
