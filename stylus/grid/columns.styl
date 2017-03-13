@@ -2,23 +2,36 @@
 
 $gutter = 15px
 
-.Grido
+.grido
     flex()
     flex-wrap(wrap)
     width 100%
 
-    &--with-gutter
-        @extend .Grido
-
+    &--w-gutter
         > *
             padding-left $gutter
             padding-right $gutter
 
-    &--j-c-around
+    &--no-wrap
+        flex-wrap(nowrap)
+
+    &--jc-around
         flex-justify(space-around)
 
-    &--j-c-end
+    &--jc-between
+        flex-justify(space-between)
+
+    &--jc-center
+        flex-justify(center)
+
+    &--jc-end
         flex-justify(flex-end)
+
+    &--ai-center
+        flex-align-items(center)
+
+    &--ai-end
+        flex-align-items(flex-end)
 
 +prefix-classes('Grido__')
     .just-around
