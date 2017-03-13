@@ -2,7 +2,7 @@
   "name": "grido",
   "version": "0.0.1",
   "homepage": "http://vilaboim.github.io/grido",
-  "author": "Lucas Vilaboim <lucas@vilaboim.com> (http://vilaboim.me)",
+  "author": "Lucas Vilaboim <lucas@vilaboim.com> (http://vilaboim.com)",
   "description": "Grido is a Flexbox grid made between Star Wars Rebels and A New Hope (Han shot first!)",
   "main": "grido.styl",
   "repository": {
@@ -24,7 +24,9 @@
     "stylus": "^0.54.5"
   },
   "scripts": {
-    "stylus": "stylus grido.styl -o css/grido.css",
+    "build": "npm run build-clean && mkdir css && npm run build-stylus",
+    "build-clean": "rm -rf css",
+    "build-stylus": "stylus grido.styl -o css/grido.css",
     "watch": "stylus -w grido.styl -o css/grido.css"
   },
   "files": [
