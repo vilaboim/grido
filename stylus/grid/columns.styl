@@ -1,45 +1,69 @@
-@import "../utilities/flexbox"
+@import "../utilities/mixins"
 
 $gutter = 15px
 
 .grido
-    flex()
+.grido--inline
     flex-wrap(wrap)
     width 100%
 
-    &--w-gutter
+.grido
+    flex()
+
+.grido--inline
+    flex(inline)
+
++prefix-classes("g__")
+    for num in 1..12
+        .is--{num}
+            width ( 100% / 12 ) * num
+
+    .w-gutter
         > *
             padding-left $gutter
             padding-right $gutter
 
-    &--no-wrap
+    /**
+     * Wrap
+     */
+    .no-wrap
         flex-wrap(nowrap)
 
-    &--jc-around
-        flex-justify(space-around)
+    .wrap-reverse
+        flex-wrap(wrap-reverse)
 
-    &--jc-between
-        flex-justify(space-between)
+    /**
+     * Justify-content
+     */
+    .jc-start
+        flex-justify(flex-start)
 
-    &--jc-center
-        flex-justify(center)
-
-    &--jc-end
+    .jc-end
         flex-justify(flex-end)
 
-    &--ai-center
-        flex-align-items(center)
+    .jc-center
+        flex-justify(center)
 
-    &--ai-end
-        flex-align-items(flex-end)
-
-+prefix-classes('Grido__')
-    .just-around
+    .jc-around
         flex-justify(space-around)
 
-    .vertAlign-center
+    .jc-between
+        flex-justify(space-between)
+
+    /**
+     * Align-items
+     */
+    .ai-start
+        flex-align-items(flex-start)
+
+    .ai-end
+        flex-align-items(flex-end)
+
+    .ai-center
         flex-align-items(center)
 
-    for num in 1..12
-        .is--{num}
-            width ( 100% / 12 ) * num
+    .ai-end
+        flex-align-items(flex-end)
+
+    .ai-stretch
+        flex-align-items(stretch)
