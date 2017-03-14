@@ -1,8 +1,13 @@
-flex()
-    display -ms-flexbox
-    display -webkit-box
-    display -webkit-flex
-    display flex
+flex(type = 'block')
+    if type is 'inline'
+        display -ms-inline-flexbox
+        display -webkit-inline-flex
+        display inline-flex
+    else
+        display -ms-flexbox
+        display -webkit-box
+        display -webkit-flex
+        display flex
 
 flex-direction(val)
     -webkit-flex-direction val
