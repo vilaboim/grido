@@ -10,5 +10,8 @@ _gh_pages
 _site
 node_modules
 
-# vscode
+# yarn
+yarn-error.log
+
+# ide
 .vscode
