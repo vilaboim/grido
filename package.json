@@ -1,9 +1,9 @@
 {
   "name": "grido",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "homepage": "http://vilaboim.github.io/grido",
   "author": "Lucas Vilaboim <lucas@vilaboim.com> (http://vilaboim.com)",
-  "description": "Grido is a Flexbox grid made between Star Wars Rebels and A New Hope (Han shot first!)",
+  "description": "Grido is a grid made between Star Wars Rebels and A New Hope (Han shot first!)",
   "main": "grido.styl",
   "repository": {
     "type": "git",
@@ -21,13 +21,15 @@
     "url": "https://github.com/vilaboim/grido/issues"
   },
   "devDependencies": {
-    "stylus": "^0.54.5"
+    "autoprefixer-stylus": "^0.14.0",
+    "postcss": "^6.0.19",
+    "stylus": "0.54.5"
   },
   "scripts": {
-    "build": "npm run build-clean && mkdir css && npm run build-stylus",
-    "build-clean": "rm -rf css",
-    "build-stylus": "stylus grido.styl -o css/grido.css",
-    "watch": "stylus -w grido.styl -o css/grido.css"
+    "prebuild": "rm -rf css && mkdir css",
+    "build": "stylus -u autoprefixer-stylus -c grido.styl -o css/grido.min.css",
+    "build:uncompressed": "stylus -u autoprefixer-stylus grido.styl -o css/grido.css",
+    "watch": "stylus -w -u autoprefixer-stylus grido.styl css/grido.css"
   },
   "files": [
     "css",
