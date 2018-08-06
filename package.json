@@ -26,10 +26,9 @@
     "stylus": "0.54.5"
   },
   "scripts": {
-    "prebuild": "rm -rf css && mkdir css",
-    "build": "stylus -u autoprefixer-stylus -c grido.styl -o css/grido.min.css",
-    "build:uncompressed": "stylus -u autoprefixer-stylus grido.styl -o css/grido.css",
-    "watch": "stylus -w -u autoprefixer-stylus grido.styl css/grido.css"
+    "build": "stylus -u autoprefixer-stylus -c ./grido.styl -o ./grido.min.css",
+    "build:dev": "stylus -u autoprefixer-stylus ./grido.styl -o ./grido.css",
+    "watch": "stylus -w -u autoprefixer-stylus grido.styl ./grido.css"
   },
   "files": [
     "css",
