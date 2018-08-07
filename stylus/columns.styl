@@ -1,10 +1,16 @@
 $gutter = 15px
 
-+prefix-classes("g__is--")
-  for num in 1..12
-    .{num}
-      flex 0 0 percentage(num / 12)
-      max-width percentage(num / 12 )
-      min-height 1px
-      padding-left ($gutter / 2)
-      padding-right ($gutter / 2)
+.g__col
+  flex-grow 0
+  flex-shrink 0
+  min-height 1px
+  padding-left ($gutter / 2)
+  padding-right ($gutter / 2)
+
+  .g__no-gutter &
+    padding 0
+
+for num in 1..12
+  .g__is--{num}
+    flex-basis percentage(num / 12)
+    max-width percentage(num / 12 )
