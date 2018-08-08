@@ -14,27 +14,19 @@
     "css",
     "stylus",
     "flexbox",
-    "responsive",
-    "framework"
+    "responsive"
   ],
   "bugs": {
     "url": "https://github.com/vilaboim/grido/issues"
   },
   "devDependencies": {
     "autoprefixer-stylus": "^0.14.0",
-    "postcss": "^6.0.19",
+    "postcss": "^7.0.2",
     "stylus": "0.54.5"
   },
   "scripts": {
     "build": "stylus -u autoprefixer-stylus -c ./grido.styl -o ./grido.min.css",
     "build:dev": "stylus -u autoprefixer-stylus ./grido.styl -o ./grido.css",
     "watch": "stylus -w -u autoprefixer-stylus grido.styl ./grido.css"
-  },
-  "files": [
-    "css",
-    "stylus",
-    "grido.styl",
-    "LICENSE",
-    "README.md"
-  ]
+  }
 }

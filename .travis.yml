@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- 8.11.3
+script:
+- npm run serve build:dev
+- npm run serve build
+after_success:
+- echo "Cleaning files..."
+- rm -rf stylus
+- rm .editorconfig
+- rm package-* yarn.*
+branch:
+  only:
+  - master
+before_deploy:
+- echo "Preparing deploy..."
+deploy:
+  provider: npm
+  email: lucas@vilaboim.com
+  api_key:
+    secure: aRHDqcJ03M07sLO0ULIRk+ELf4UM+DSIWUGHH/7yK4n1uTyImos5BG9EcFoLG3sBUggw/mqiZrKQLqc7ubjvaEVcD7dssj6Wfh4KG4Xde4rKvRdo7mXMY/zxEVs3gC38EhArjDydHpOq44uWV1WnVitHh6BxMRly1INdKDgozT+k7+OuSM/R6JAniVfezdeUBIapeFLTSVQrwEfphRMvJRFGLMJbgJDDWHF18fGdOPAinpakWOkAQ8A47eH2SZ0LwIGpgo1fpcORt9nuAhwCu9sLs/S85gEhTo+G+2i6tInBhbOqvvX7othRV4czcaYUbMyNW7sZ2PloS5Z5pKasTBzd8mrJ0qQ2bXVqAcSdkWOo9Y3+/mvCsdE/PbjRpHceJVbF3PsWgS0JADm5H/eQIfYGtJSbUY8QGg1VarHNLDoSX1SeNmQnRSRqQp6nVz2If7f6OSxzMpRbyQ5f9V2Q1XRTsxn/DUHrj7ZqFnVwkGlPimkcR4JyM0lDXvmFlE6m+9UPOqMQ7KYpT2mTFfIpfreJTQC4UQ/fr5Q4nDTlNfh8A6ZL7Opk/KsXb0N03JXMKiDFXXuth+9c/grvFtSRP5KUt09CqoHKFhRutlCna7goAJ27j0uiRc2euCuDBYKF6ZO9R9FWQrmZWq8nJKmbW8a2NxGoojEpfQ+CYfncjm8=
