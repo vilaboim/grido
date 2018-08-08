@@ -2,8 +2,8 @@ language: node_js
 node_js:
 - 8.11.3
 script:
-- npm run serve build:dev
-- npm run serve build
+- npm run build:dev
+- npm run build
 after_success:
 - echo "Cleaning files..."
 - rm -rf stylus
