@@ -1,10 +1,11 @@
 language: node_js
 node_js:
 - 8.11.3
+install: npm
 script:
 - npm run build:dev
 - npm run build
-after_success:
+before_deploy:
 - echo "Cleaning files..."
 - rm -rf stylus
 - rm .editorconfig
@@ -12,9 +13,8 @@ after_success:
 branch:
   only:
   - master
-before_deploy:
-- echo "Preparing deploy..."
 deploy:
+  skip_cleanup: true
   provider: npm
   email: lucas@vilaboim.com
   api_key:
