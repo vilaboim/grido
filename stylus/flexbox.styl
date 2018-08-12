@@ -1,17 +1,26 @@
 .grido
-.grido--inline
-  flex-wrap wrap
-  width 100%
-
-.grido
+  box-sizing border-box
   display flex
+  flex-wrap wrap
+  width auto
 
 .grido--inline
-  display flex-inline
+  @extend .grido
+  display inline-flex
 
-+prefix-classes("g__")
-  // Wrap
-  .no-wrap
++prefix-classes("g--")
+  // Direction
+  .reverse
+    flex-direction row-reverse
+
+  .vertical
+    flex-direction column
+
+    &.reverse
+      flex-direction column-reverse
+
+  // No wrap
+  .nowrap
     flex-wrap nowrap
 
   .wrap-reverse
