@@ -1,11 +1,10 @@
-$gap = 15px
+@import "variables"
 
-.g__col
+*[class^="g__col"]
   flex-grow 0
   flex-shrink 0
   min-height 1px
-  padding-left ($gap / 2)
-  padding-right ($gap / 2)
+  padding ($gap / 2)
 
   .g__no-gap &
     padding 0
@@ -13,4 +12,4 @@ $gap = 15px
 for num in 1..12
   .g__col--{num}
     flex-basis percentage(num / 12)
-    max-width percentage(num / 12 )
+    width percentage(num / 12 )
