@@ -1,15 +1,20 @@
+@import "variables"
+
 .grido
   box-sizing border-box
   display flex
   flex-wrap wrap
   width auto
 
+  *
+    box-sizing border-box
+
 .grido--inline
   @extend .grido
   display inline-flex
 
 +prefix-classes("g--")
-  // Direction
+  // direction
   .reverse
     flex-direction row-reverse
 
@@ -19,47 +24,73 @@
     &.reverse
       flex-direction column-reverse
 
-  // No wrap
+  // no wrap
   .nowrap
     flex-wrap nowrap
 
   .wrap-reverse
     flex-wrap wrap-reverse
 
-    // Justify-content
-  .justify-start
-    justify-content flex-start
+  // justify-content
+  .justify
+    &-start
+      justify-content flex-start
 
-  .justify-end
-    justify-content flex-end
+    &-end
+      justify-content flex-end
 
-  .justify-center
-    justify-content center
+    &-center
+      justify-content center
 
-  .justify-around
-    justify-content space-around
+    &-around
+      justify-content space-around
 
-  .justify-between
-    justify-content space-between
+    &-between
+      justify-content space-between
 
-  .justify-evenly
-    justify-content space-evenly
+    &-evenly
+      justify-content space-evenly
 
-  // Align-items
-  .align-items-start
-    align-items flex-start
+  // align-items
+  .align-items
+    &-start
+      align-items flex-start
 
-  .align-items-end
-    align-items flex-end
+    &-end
+      align-items flex-end
 
-  .align-items-center
-    align-items center
+    &-center
+      align-items center
 
-  .align-items-baseline
-    align-items baseline
+    &-baseline
+      align-items baseline
 
-  .align-items-end
-    align-items flex-end
+    &-stretch
+      align-items stretch
 
-  .align-items-stretch
-    align-items stretch
+  // align-content
+  .align-content
+      &-start
+        align-content flex-start
+
+      &-end
+        align-content flex-end
+
+      &-center
+        align-content center
+
+      &-around
+        align-content space-around
+
+      &-between
+        align-content space-between
+
+      &-stretch
+        align-content stretch
+
+  .align-self
+    &-stretch
+      align-self stretch
+
+.g--nowrap > *[^="g__col"]
+  flex-shrink 1
