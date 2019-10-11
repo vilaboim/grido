@@ -1,146 +1,187 @@
 /* http://vilaboim.github.io/grido v1.0.0 | MIT License | github.com/vilaboim/grido */
 @charset "utf-8";
-.grido,
-.grido--inline {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-}
-.grido {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.grido--inline {
-  display: flex-inline;
-}
-.g__no-wrap {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-.g__wrap-reverse {
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
-}
-.g__jc-start {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-.g__jc-end {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.g__jc-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.g__jc-around {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.g__jc-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.g__ai-start {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.g__ai-end {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-.g__ai-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.g__ai-end {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-.g__ai-stretch {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-.g__col {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+*[class^="g__col"] {
+  flex-grow: 0;
+  flex-shrink: 0;
   min-height: 1px;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
+  padding: 7.5px;
 }
-.g__no-gutter .g__col {
+.g--nowrap > *[class^="g__col"] {
+  flex-shrink: 1;
+}
+.g__no-gap *[class^="g__col"] {
   padding: 0;
 }
-.g__is--1 {
-  -ms-flex-preferred-size: 8.333333333333332%;
-      flex-basis: 8.333333333333332%;
-  max-width: 8.333333333333332%;
+.g__col--1 {
+  flex-basis: 8.333333333333332%;
+  width: 8.333333333333332%;
 }
-.g__is--2 {
-  -ms-flex-preferred-size: 16.666666666666664%;
-      flex-basis: 16.666666666666664%;
-  max-width: 16.666666666666664%;
+.g__col--2 {
+  flex-basis: 16.666666666666664%;
+  width: 16.666666666666664%;
 }
-.g__is--3 {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  max-width: 25%;
+.g__col--3 {
+  flex-basis: 25%;
+  width: 25%;
 }
-.g__is--4 {
-  -ms-flex-preferred-size: 33.33333333333333%;
-      flex-basis: 33.33333333333333%;
-  max-width: 33.33333333333333%;
+.g__col--4 {
+  flex-basis: 33.33333333333333%;
+  width: 33.33333333333333%;
 }
-.g__is--5 {
-  -ms-flex-preferred-size: 41.66666666666667%;
-      flex-basis: 41.66666666666667%;
-  max-width: 41.66666666666667%;
+.g__col--5 {
+  flex-basis: 41.66666666666667%;
+  width: 41.66666666666667%;
 }
-.g__is--6 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  max-width: 50%;
+.g__col--6 {
+  flex-basis: 50%;
+  width: 50%;
 }
-.g__is--7 {
-  -ms-flex-preferred-size: 58.333333333333336%;
-      flex-basis: 58.333333333333336%;
-  max-width: 58.333333333333336%;
+.g__col--7 {
+  flex-basis: 58.333333333333336%;
+  width: 58.333333333333336%;
 }
-.g__is--8 {
-  -ms-flex-preferred-size: 66.66666666666666%;
-      flex-basis: 66.66666666666666%;
-  max-width: 66.66666666666666%;
+.g__col--8 {
+  flex-basis: 66.66666666666666%;
+  width: 66.66666666666666%;
 }
-.g__is--9 {
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-  max-width: 75%;
+.g__col--9 {
+  flex-basis: 75%;
+  width: 75%;
 }
-.g__is--10 {
-  -ms-flex-preferred-size: 83.33333333333334%;
-      flex-basis: 83.33333333333334%;
-  max-width: 83.33333333333334%;
+.g__col--10 {
+  flex-basis: 83.33333333333334%;
+  width: 83.33333333333334%;
 }
-.g__is--11 {
-  -ms-flex-preferred-size: 91.66666666666666%;
-      flex-basis: 91.66666666666666%;
-  max-width: 91.66666666666666%;
+.g__col--11 {
+  flex-basis: 91.66666666666666%;
+  width: 91.66666666666666%;
 }
-.g__is--12 {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  max-width: 100%;
+.g__col--12 {
+  flex-basis: 100%;
+  width: 100%;
+}
+.grido,
+.grido--inline {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+.grido *,
+.grido--inline * {
+  box-sizing: border-box;
+}
+.grido--inline {
+  display: inline-flex;
+}
+.g--reverse {
+  flex-direction: row-reverse;
+}
+.g--vertical {
+  flex-direction: column;
+}
+.g--vertical.g--reverse {
+  flex-direction: column-reverse;
+}
+.g--nowrap {
+  flex-wrap: nowrap;
+}
+.g--wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.g--justify-start {
+  justify-content: flex-start;
+}
+.g--justify-end {
+  justify-content: flex-end;
+}
+.g--justify-center {
+  justify-content: center;
+}
+.g--justify-around {
+  justify-content: space-around;
+}
+.g--justify-between {
+  justify-content: space-between;
+}
+.g--justify-evenly {
+  justify-content: space-evenly;
+}
+.g--align-items-start {
+  align-items: flex-start;
+}
+.g--align-items-end {
+  align-items: flex-end;
+}
+.g--align-items-center {
+  align-items: center;
+}
+.g--align-items-baseline {
+  align-items: baseline;
+}
+.g--align-items-stretch {
+  align-items: stretch;
+}
+.g--align-content-start {
+  align-content: flex-start;
+}
+.g--align-content-end {
+  align-content: flex-end;
+}
+.g--align-content-center {
+  align-content: center;
+}
+.g--align-content-around {
+  align-content: space-around;
+}
+.g--align-content-between {
+  align-content: space-between;
+}
+.g--align-content-stretch {
+  align-content: stretch;
+}
+.g--align-self-start {
+  align-self: flex-start;
+}
+.g--align-self-end {
+  align-self: flex-end;
+}
+.g--align-self-center {
+  align-self: center;
+}
+.g--order-1 {
+  order: 1;
+}
+.g--order-2 {
+  order: 2;
+}
+.g--order-3 {
+  order: 3;
+}
+.g--order-4 {
+  order: 4;
+}
+.g--order-5 {
+  order: 5;
+}
+.g--order-6 {
+  order: 6;
+}
+.g--order-7 {
+  order: 7;
+}
+.g--order-8 {
+  order: 8;
+}
+.g--order-9 {
+  order: 9;
+}
+.g--order-10 {
+  order: 10;
+}
+.g--order-11 {
+  order: 11;
+}
+.g--order-12 {
+  order: 12;
 }

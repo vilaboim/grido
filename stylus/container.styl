@@ -89,8 +89,11 @@
         align-content stretch
 
   .align-self
-    &-stretch
-      align-self stretch
+    &-start
+      align-self flex-start
 
-.g--nowrap > *[class^="g__col"]
-  flex-shrink 1
+    &-end
+      align-self flex-end
+
+    &-center
+      align-self center
