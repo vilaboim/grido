@@ -4,7 +4,7 @@
   "homepage": "http://vilaboim.github.io/grido",
   "author": "Lucas Vilaboim <lucas@vilaboim.com> (http://vilaboim.com)",
   "description": "Grido is a grid made between Star Wars Rebels and A New Hope (Han shot first!)",
-  "main": "grido.styl",
+  "main": "grido.min.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/vilaboim/grido.git"
@@ -28,7 +28,11 @@
     "build": "stylus -c ./grido.styl -o ./grido.min.css",
     "build:dev": "stylus ./grido.styl -o ./grido.css",
     "watch": "stylus -w grido.styl ./grido.css",
-    "commitmsg": "node scripts/verifyCommitMsg.js"
+    "commitmsg": "node scripts/verifyCommitMsg.js",
+    "release:tags": "git push && git push --tags",
+    "release:patch": "npm version patch && npm run release:tags",
+    "release:minor": "npm version minor && npm run release:tags",
+    "release:major": "npm version major && npm run release:tags"
   },
   "engines": {
     "yarn": "1",
