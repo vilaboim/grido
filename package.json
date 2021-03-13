@@ -33,9 +33,5 @@
     "release:patch": "npm version patch && npm run release:tags",
     "release:minor": "npm version minor && npm run release:tags",
     "release:major": "npm version major && npm run release:tags"
-  },
-  "engines": {
-    "yarn": "1",
-    "npm": "6"
   }
 }
