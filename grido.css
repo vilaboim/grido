@@ -1,65 +1,5 @@
 /* http://vilaboim.github.io/grido v1.0.0 | MIT License | github.com/vilaboim/grido */
 @charset "utf-8";
-*[class^="g__col"] {
-  flex-grow: 0;
-  flex-shrink: 0;
-  min-height: 1px;
-  padding: 7.5px;
-}
-.g--nowrap > *[class^="g__col"] {
-  flex-shrink: 1;
-}
-.g__no-gap *[class^="g__col"] {
-  padding: 0;
-}
-.g__col--1 {
-  flex-basis: 8.333333333333332%;
-  width: 8.333333333333332%;
-}
-.g__col--2 {
-  flex-basis: 16.666666666666664%;
-  width: 16.666666666666664%;
-}
-.g__col--3 {
-  flex-basis: 25%;
-  width: 25%;
-}
-.g__col--4 {
-  flex-basis: 33.33333333333333%;
-  width: 33.33333333333333%;
-}
-.g__col--5 {
-  flex-basis: 41.66666666666667%;
-  width: 41.66666666666667%;
-}
-.g__col--6 {
-  flex-basis: 50%;
-  width: 50%;
-}
-.g__col--7 {
-  flex-basis: 58.333333333333336%;
-  width: 58.333333333333336%;
-}
-.g__col--8 {
-  flex-basis: 66.66666666666666%;
-  width: 66.66666666666666%;
-}
-.g__col--9 {
-  flex-basis: 75%;
-  width: 75%;
-}
-.g__col--10 {
-  flex-basis: 83.33333333333334%;
-  width: 83.33333333333334%;
-}
-.g__col--11 {
-  flex-basis: 91.66666666666666%;
-  width: 91.66666666666666%;
-}
-.g__col--12 {
-  flex-basis: 100%;
-  width: 100%;
-}
 .grido,
 .grido--inline {
   box-sizing: border-box;
@@ -149,39 +89,99 @@
 .g--align-self-center {
   align-self: center;
 }
-.g--order-1 {
+*[class^="g__col"] {
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  padding: 7.5px;
+}
+.g--nowrap > *[class^="g__col"] {
+  flex-shrink: 1;
+}
+.g__no-gap *[class^="g__col"] {
+  padding: 0;
+}
+.g__col--1 {
+  flex-basis: 8.333333333333332%;
+  width: 8.333333333333332%;
+}
+.g__col--2 {
+  flex-basis: 16.666666666666664%;
+  width: 16.666666666666664%;
+}
+.g__col--3 {
+  flex-basis: 25%;
+  width: 25%;
+}
+.g__col--4 {
+  flex-basis: 33.33333333333333%;
+  width: 33.33333333333333%;
+}
+.g__col--5 {
+  flex-basis: 41.66666666666667%;
+  width: 41.66666666666667%;
+}
+.g__col--6 {
+  flex-basis: 50%;
+  width: 50%;
+}
+.g__col--7 {
+  flex-basis: 58.333333333333336%;
+  width: 58.333333333333336%;
+}
+.g__col--8 {
+  flex-basis: 66.66666666666666%;
+  width: 66.66666666666666%;
+}
+.g__col--9 {
+  flex-basis: 75%;
+  width: 75%;
+}
+.g__col--10 {
+  flex-basis: 83.33333333333334%;
+  width: 83.33333333333334%;
+}
+.g__col--11 {
+  flex-basis: 91.66666666666666%;
+  width: 91.66666666666666%;
+}
+.g__col--12 {
+  flex-basis: 100%;
+  width: 100%;
+}
+.g__order--1 {
   order: 1;
 }
-.g--order-2 {
+.g__order--2 {
   order: 2;
 }
-.g--order-3 {
+.g__order--3 {
   order: 3;
 }
-.g--order-4 {
+.g__order--4 {
   order: 4;
 }
-.g--order-5 {
+.g__order--5 {
   order: 5;
 }
-.g--order-6 {
+.g__order--6 {
   order: 6;
 }
-.g--order-7 {
+.g__order--7 {
   order: 7;
 }
-.g--order-8 {
+.g__order--8 {
   order: 8;
 }
-.g--order-9 {
+.g__order--9 {
   order: 9;
 }
-.g--order-10 {
+.g__order--10 {
   order: 10;
 }
-.g--order-11 {
+.g__order--11 {
   order: 11;
 }
-.g--order-12 {
+.g__order--12 {
   order: 12;
 }
