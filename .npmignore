@@ -1,3 +1,5 @@
 stylus/
 *.styl
 .editorconfig
+scripts/
+docs/
