@@ -1,9 +1,9 @@
 {
   "name": "grido",
   "version": "2.0.0",
-  "homepage": "http://vilaboim.github.io/grido",
+  "homepage": "https://github.com/vilaboim/grido",
   "author": "Lucas Vilaboim <lucas@vilaboim.com> (http://vilaboim.com)",
-  "description": "Grido is a grid made between Star Wars Rebels and A New Hope (Han shot first!)",
+  "description": "Grido is a grid developed between Star Wars Rebels and A New Hope (Han shot first!)",
   "main": "grido.min.css",
   "repository": {
     "type": "git",
@@ -12,9 +12,9 @@
   "license": "MIT",
   "keywords": [
     "css",
-    "stylus",
     "flexbox",
-    "responsive"
+    "grid",
+    "stylus"
   ],
   "bugs": {
     "url": "https://github.com/vilaboim/grido/issues"
